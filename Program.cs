@@ -30,6 +30,7 @@ namespace WorkerInfo
             if (levelInt == 2) { level = WorkLevel.MID_LEVEL; }
             if (levelInt == 3) { level = WorkLevel.SENIOR; }
 
+
             Worker worker = new Worker(name, level, baseSalary, departamento);
 
             while(on)
@@ -51,9 +52,15 @@ namespace WorkerInfo
             switch (escolha)
             {
                 case 1:
-                    worker.AddContract();
-                    Console.ReadLine();
-                    Console.Clear();
+                    Console.WriteLine("Quantos contratos esse trabalhador tem ?");
+                    Console.WriteLine("Contratos: ");
+                    int contratos = int.Parse(Console.ReadLine());
+                    for (int i = 0; i < contratos; i++)
+                    {
+                        Console.WriteLine($"Contrato #{i}");
+                        worker.AddContract();
+                        Console.Clear();
+                    }
                     break;
 
                 case 2:

@@ -11,8 +11,7 @@ namespace WorkerInfo.Entites
         public WorkLevel Level { get; set; }
         public double BaseSalary { get; private set; }
         public Departament Departament { get; set; }
-
-        List<HourContract> WorkContractList = new List<HourContract>();
+        public List<HourContract> WorkContractList { get; set; } = new List<HourContract>();
 
         public Worker(string name, WorkLevel level, double salary, Departament departamento)
         {
